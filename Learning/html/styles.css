@@ -1,0 +1,151 @@
+body{
+    background-color: #ddd;
+}
+.navbar {
+    background-color: #ddd;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #312f2f;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #fcf8f8;
+    color: rgb(65, 63, 63);
+}
+
+
+.container {
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.profile-card {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    overflow:hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 15px;
+  
+    
+}
+
+.Hero{
+    margin-left: 500px;
+    font-size: 20px;
+    margin-bottom: 70px;
+
+
+}
+
+.contact-info {
+    margin-top: 5px;
+}
+
+.contact-info i{
+    padding-left: 5px;
+}
+.contact-info a{
+    color: #8f8d8d;
+}
+
+.contact-info :hover ::before{
+    color: #abd9f8;
+}
+
+.profile-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-card img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-info {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.profile-card:hover .profile-info {
+    opacity: 1;
+
+}
+
+.about-content ul {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+
+.hero-left{
+  margin-right: 100px;
+}
+.expandable:hover .footer ::after{
+    position:fixed;
+}
+.footer {
+    position:fixed; /* Set footer position to absolute */
+    bottom: 0; /* Align footer to the bottom of the page */
+    width: 100%; /* Set footer width to 100% */
+    background-color: #f0f0f0; /* Set background color for the footer */
+    padding: 10px 0; /* Add some padding to the footer */
+    text-align: center; /* Align text in the center */
+}
+#contact {
+    position:sticky;
+    bottom: 60px; /* Adjust as needed to leave space for the footer */
+    width: 100%;
+    background-color: #fff; /* Optional: Set background color for the section */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    text-align: center;
+    background-image: url(/Images/OIP.jpg);
+    color: #fcf8f8;
+}
+body{
+    margin: 0;
+}
+.expandable{
+    cursor:pointer;
+    margin-left: 650px;
+}
+.about-content{
+    display: none;
+    margin-left: 650px;
+}
+.expandable:hover + .about-content{
+   display: block;
+
+}
