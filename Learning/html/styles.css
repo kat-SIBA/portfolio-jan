@@ -1,5 +1,7 @@
 body{
     background-color: #ddd;
+    margin: 0;
+    padding: 0;
 }
 .navbar {
     background-color: #ddd;
@@ -53,9 +55,11 @@ body{
 .Hero{
     margin-left: 500px;
     font-size: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 
-
+}
+.Hero p,h2{
+    margin-bottom:0px;
 }
 
 .contact-info {
@@ -70,7 +74,7 @@ body{
 }
 
 .contact-info :hover ::before{
-    color: #abd9f8;
+    color: #f5f8fa;
 }
 
 .profile-info {
@@ -103,17 +107,10 @@ body{
 
 }
 
-.about-content ul {
-    list-style-type: none;
-    padding-left: 0;
 
-}
 
 .hero-left{
   margin-right: 100px;
-}
-.expandable:hover .footer ::after{
-    position:fixed;
 }
 .footer {
     position:fixed; /* Set footer position to absolute */
@@ -125,27 +122,50 @@ body{
 }
 #contact {
     position:sticky;
-    bottom: 60px; /* Adjust as needed to leave space for the footer */
+    bottom: 60px; 
     width: 100%;
-    background-color: #fff; /* Optional: Set background color for the section */
-    padding: 20px;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color:rgb(14, 13, 13);
+    padding-bottom: 60px;
+    padding-top: 60px;
+    box-sizing: border-box;
     text-align: center;
-    background-image: url(/Images/OIP.jpg);
-    color: #fcf8f8;
+    color: #cac9c9;
 }
+
 body{
     margin: 0;
 }
-.expandable{
-    cursor:pointer;
-    margin-left: 650px;
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
 }
-.about-content{
-    display: none;
-    margin-left: 650px;
-}
-.expandable:hover + .about-content{
-   display: block;
 
+.Cont h3{
+    margin-top: -50px;
+    margin-right: -750px;
+}
+#about-content {
+    display: none;
+    font-weight: normal;
+    
+}
+#Expandable {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;  
+}
+.About-me {
+    cursor: pointer;
+    
+}
+.about-content ul {
+    list-style-type: none;
+    padding-left: 0;
 }
