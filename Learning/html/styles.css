@@ -51,26 +51,26 @@ body{
   
     
 }
-
-.Hero{
-    margin-left: 500px;
-    font-size: 20px;
-    margin-bottom: 40px;
-
+.hero p{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: -10px;
 }
-.Hero p,h2{
-    margin-bottom:0px;
-}
+.hero h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+ }
+ 
 
-.contact-info {
+.contact-info,i ,a{
     margin-top: 5px;
-}
-
-.contact-info i{
     padding-left: 5px;
-}
-.contact-info a{
     color: #8f8d8d;
+
+
 }
 
 .contact-info :hover ::before{
@@ -89,7 +89,9 @@ body{
     width: 100%;
     height: auto;
 }
-
+.Name{
+    font-size:30px;
+}
 .profile-info {
     position: absolute;
     bottom: 10px;
@@ -121,17 +123,16 @@ body{
     text-align: center; /* Align text in the center */
 }
 #contact {
-    position:sticky;
-    bottom: 60px; 
+    position:absolute;
+    bottom: -70px; 
     width: 100%;
     background-color:rgb(14, 13, 13);
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 10px;
+    padding-top: 40px;
     box-sizing: border-box;
     text-align: center;
     color: #cac9c9;
 }
-
 body{
     margin: 0;
 }
@@ -145,7 +146,7 @@ body{
     font-weight: bold;
 }
 
-.Cont h3{
+.Cont h4{
     margin-top: -50px;
     margin-right: -750px;
 }
@@ -154,17 +155,17 @@ body{
     font-weight: normal;
     
 }
-#Expandable {
+.expandable:hover {
+    background-color: #a5a4a4;
+    color: rgb(14, 14, 14);
+}
+.expandable {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;  
+    color: #070707;
+    text-align: center;
 }
-.About-me {
-    cursor: pointer;
     
-}
 .about-content ul {
     list-style-type: none;
     padding-left: 0;
