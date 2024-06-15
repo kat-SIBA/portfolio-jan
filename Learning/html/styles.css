@@ -1,16 +1,19 @@
 :root {
-    --main-bg-color:var(--main-bg-color);
-    --text-color: #ebe6e6;
-    --hover-bg-color: #a09e9e;
-    --hover-text-color: rgb(134, 132, 132);
-    --profile-bg-color: rgba(0, 0, 0, 0.5);
-    --contact-color: #8f8d8d;
+    --main-bg-color: #282c34;
+    --text-color: #ffffff;
+    --hover-bg-color: #61dafb;
+    --hover-text-color: #8b8c8f;
+    --profile-bg-color: rgba(40, 44, 52, 0.9);
+    --contact-color: #e2e8f0;
+    --font-family: 'Roboto', sans-serif;
 }
+
 body {
-    background: rgb(58, 57, 57);
+    background: #f7f7f7;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
+    color: var(--text-color);
 }
 
 .navbar {
@@ -22,6 +25,8 @@ body {
     z-index: 1000;
     display: flex;
     justify-content: flex-end;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
@@ -30,7 +35,7 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .navbar a:hover {
@@ -38,39 +43,37 @@ body {
     color: var(--hover-text-color);
 }
 
-.container {
-    margin-top: 60px;
-    text-align: center;
-    display: flex;
+.container-image {
+    padding: 100px 20px;
+    margin-top: 60px; /* Adjust margin to account for fixed navbar */
 }
 
 .profile-card {
     width: 300px;
-    height: 400px;
     overflow: hidden;
-    border-radius: 20%;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
-    margin: 50px;   
+    margin: 50px;
     position: relative;
     text-align: center;
-    background-color: #fac1c1;
-
+    background-color: var(--main-bg-color);
 }
 
 .profile-card img {
     width: 100%;
     height: auto;
+    border-bottom: 3px solid var(--hover-bg-color);
 }
 
 .profile-info {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: var(--profile-bg-color);
     padding: 10px;
-    color: #fff;
+    color: var(--text-color);
     transition: opacity 0.3s ease;
     opacity: 0;
 }
@@ -84,9 +87,8 @@ body {
 }
 
 .contact-info a {
-    margin-top: 5px;
-    padding-left: 5px;
-    color: var(--contact-color);
+    margin: 5px;
+    color: var(--hover-bg-color);
     text-decoration: none;
 }
 
@@ -95,110 +97,111 @@ body {
 }
 
 .hero {
-    padding: 60px 20px;
+    padding: 100px 20px;
     text-align: center;
+    background: var(--main-bg-color);
+    color: var(--text-color); 
+    margin-top: auto;
 }
 
 .hero-section {
     max-width: 800px;
     margin: auto;
-    margin-top: -500px;
-    margin-left: 300px;
 }
-.hero h2 ,p{
-    color: #f0f0f0;
-}
+
 .hero h2 {
-    font-size: 36px;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 .section {
     padding: 60px 20px;
+    background: #ffffff;
+    color: #333;
+    border-top: 3px solid var(--hover-bg-color);
 }
 
 .section-contact {
-    margin-top: 500px;
+    background: var(--contact-color);
     padding: 60px 20px;
-   /*background-color: #8f8d8d;*/
-    
-}  
-
-.section-contact h4 {
-    font-size: 24px;
-    margin-bottom: 20px;
 }
 
+.section-contact h4 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--main-bg-color);
+}
 
 .section-contact form {
-    /*background:url(/Learning/Images/20240425_130706.jpg);*/
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: auto;
     text-align: center;
-    padding-top: 20px;
-    border-radius:5%;
-    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5%;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
-
+    background-color: #ffffff;
 }
-
 
 .section-contact label {
     margin-bottom: 10px;
     display: block;
+    font-weight: 500;
+    color: var(--main-bg-color);
+}
 
-}
-textarea{
-    margin-left:60px ;
-}
 .section-contact input, .section-contact textarea {
     margin-bottom: 20px;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .section-contact button {
     padding: 10px;
-    background-color: var(--text-color);
-    color: #fff;
+    background-color: var(--hover-bg-color);
+    color: var(--main-bg-color);
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 4px;
 }
 
 .section-contact button:hover {
-    background-color: var(--hover-bg-color);
-    color: var(--hover-text-color);
+    background-color: var(--main-bg-color);
+    color: var(--hover-bg-color);
 }
 
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-
-@media (max-width: 768px) 
-  .container{
-        direction: inherit;
+@media (max-width: 768px) {
+    .container-image {
+        flex-direction: column;
         align-items: center;
     }
 
     .profile-card {
         margin: 20px 0;
         width: 90%;
-        height: auto;
     }
 
     .navbar a {
@@ -206,7 +209,28 @@ textarea{
         display: block;
         text-align: center;
     }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .section-contact {
+        padding: 40px 20px;
+    }
 }
+
 #about-content {
     display: none;
     opacity: 0;
@@ -214,19 +238,31 @@ textarea{
     max-height: 0;
     overflow: hidden;
 }
-.section{
-    margin-left: 500px;
-    margin-top: -500px;
-}
 
 #about-content.visible {
     display: block;
     opacity: 1;
     max-height: 500px;
-    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.expandable, .about-content {
+    color: #333;
+    margin-left: 0;
     text-align: center;
 }
-ul {
-    list-style-type: none; 
-    text-align: left;
-    }
+
+.expandable {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.expandable:hover {
+    color: var(--hover-bg-color);
+}
